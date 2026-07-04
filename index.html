@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security Scan</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#00ff00;
+    font-family:Consolas, monospace;
+    overflow:hidden;
+}
+#terminal{
+    padding:20px;
+    white-space:pre-line;
+    font-size:18px;
+}
+h1{
+    color:red;
+}
+</style>
+</head>
+
+<body>
+
+<div id="terminal">
+<h1>⚠ DEVICE SECURITY SCAN INITIALIZED</h1>
+</div>
+
+<script>
+
+const lines=[
+"Connecting to secure server...",
+"Scanning device...",
+"Checking WhatsApp...",
+"Checking Instagram...",
+"Searching Gallery...",
+"Checking Contacts...",
+"Analyzing Device Security...",
+"",
+"██████████████████ 100%",
+"",
+"Device Analysis Complete.",
+"Generating Security Report...",
+"Report Uploaded Successfully.",
+"Connection Closed."
+];
+
+let i=0;
+
+function type(){
+    if(i<lines.length){
+        document.getElementById("terminal").innerHTML+=lines[i]+"<br>";
+        i++;
+        setTimeout(type,900);
+    }
+}
+
+setTimeout(type,1000);
+
+</script>
+
+</body>
+</html>
